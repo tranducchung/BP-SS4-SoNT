@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VHTM</title>
+</head>
+<body>
+<script>
+    function SNT(number) {
+        let x = true;
+        if ( number < 2){ x = false
+        }else for(i=2;i<(number-1);i++) {
+            if (number % i === 0) {
+                x = false;
+                break;
+            }
+        }
+        return x;
+    }
+    let count =0;
+    let N= parseInt(prompt("Input number:"));
+    for (let i= 1; count < N ; i++) {
+        if (SNT(i)) {
+            document.write(i + "....");
+            count++;
+        }
+    }
+</script>
+</body>
+</html>
